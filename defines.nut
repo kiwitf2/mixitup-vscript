@@ -40,7 +40,7 @@ PrecacheModel("models/weapons/c_models/c_big_mallet/c_big_mallet.mdl")
     })   
     local ScaleValue = RandomFloat(0.25, 1.0); // random float value between 25% of size and normal size
     tank.SetModelScale(ScaleValue,0.0); 
-    tank.SetHealth(50/ScaleValue); // division to allow smaller tanks to have more health
+    tank.SetHealth(20000/ScaleValue); // division to allow smaller tanks to have more health
     EntityOutputs.AddOutput(tank, "OnKilled", "boss_dead_relay", "Trigger", "", 0, -1);
     EntityOutputs.AddOutput(tank, "OnUser1", "!self", "FireUser2", "", 8.0, -1);
     EntityOutputs.AddOutput(tank, "OnUser2", "boss_deploy_relay", "Trigger", "", 0.0, -1);
